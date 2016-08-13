@@ -16,7 +16,8 @@ module.exports = function(content, map) {
   var config   = {
     port:         5487,
     ip:           "127.0.0.1",
-    moduleExport: false
+    moduleExport: false,
+    path: "/content"
   };
   var queryConfig = loaderUtils.getLoaderConfig(
     this,
@@ -30,7 +31,7 @@ module.exports = function(content, map) {
     slashes:  true,
     hostname: config.ip,
     port:     config.port,
-    pathname: "/content"
+    pathname: config.path
   });
 
   var data = new FormData()

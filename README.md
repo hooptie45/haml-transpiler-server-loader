@@ -71,7 +71,8 @@ var webpackConfig = {
   hamlTranspilerServerLoader: {
     ip:           "127.0.0.1",
     port:         5487,
-    moduleExport: true
+    moduleExport: true,
+    path: "/your/haml/endpoint"
   }
 };
 ```
